@@ -38,14 +38,14 @@ public class DuettoAdminPage {
         System.out.println("Page header Title : "+headerTitleTxt);
         return headerTitleTxt;
     }
-    public DashboardPage doLoginAsUnicornUser(String cName)
-    {
+    public DashboardPage doLoginAsUnicornUser(String cName) throws InterruptedException {
         page.fill(searchText,cName);
         page.press(searchText,"Backspace");
 
        page.isVisible(ctbledata);
         page.click("//a[text()='"+cName+"']");
         page.click(unicornBtn);
+        Thread.sleep(2000);
 
         return new DashboardPage(page);
 

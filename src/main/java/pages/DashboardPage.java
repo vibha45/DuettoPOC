@@ -8,4 +8,13 @@ public class DashboardPage {
 
         this.page = page;
     }
+    public String getDashboardPageTitle() {
+
+        return page.title();
+    }
+    public String getDashboardPageURL() {
+        String url =  page.url();
+        System.out.println("page url : " + url);
+        return url;
+    }
 }
